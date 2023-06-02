@@ -9,7 +9,7 @@ config_version = 1
 bot_version = 1.0
 
 if os.path.isfile("./config.json"):
-    with open('config.json', 'r', encoding='utf-8', errors='ignore') as f:
+    with open('config.json', 'r', encoding='cp1250', errors='ignore') as f:
     	config = json.load(f)
 
     print ("[*] config loaded")
@@ -39,7 +39,7 @@ else:
 
     json = json.dumps(config, indent=4)
 
-    with open('config.json', 'w', encoding='utf-8') as f:
+    with open('config.json', 'w', encoding='cp1250') as f:
         f.write(json)
 
     print ("[!] config file created. Fill it and run bot.")
