@@ -14,7 +14,7 @@ if os.path.isfile("./config.json"):
 
     print ("[*] config loaded")
 
-    # TODO dodać jeżeli jest nowsza wersja jsona to zaktualizować go
+    # TODO dodac jezeli jest nowsza wersja jsona to zaktualizowac go
 
 else:
     config = {
