@@ -72,7 +72,7 @@ async def on_ready():
 	await bot.change_presence(status=discord.Status.online, activity=activity)
 	print("[*] Bot is ready!")
 
-@bot.slash_command()
+@bot.slash_command(description="Send message to spotted")
 async def spotted(ctx, message):
     if config['spotted']['verification'] == True:
         admin_channel = bot.get_channel(config['spotted']['admin_channel_id'])
@@ -90,5 +90,16 @@ async def spotted(ctx, message):
         }
 
         response = requests.post(config['spotted']['webhook_url'], json=data, headers=headers)
+
+# START !!!Do not change!!!
+@bot.slash_command(description="Show info about bot")
+async def info(ctx):
+    embed = discord.Embed(title="Bot info", color=discord.Color.from_rgb(176, 11, 105))
+    embed.add_field(name="Author", value="PieselKlif [GitHub](https://github.com/PieselKlif)")
+    embed.add_field(name="Project", value="Discord-spotted [GitHub](https://github.com/PieselKlif/discord-spotted)")
+    embed.add_field(name="Bot version", value=str(bot_version))
+
+    await ctx.respond(embed=embed, ephemeral=True)
+# END !!!Do not change!!!
 
 bot.run(config['bot']['token'])
