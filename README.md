@@ -5,11 +5,9 @@
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
----
 ## Description
 Discord-spotted is discord bot in python for write anonymous messages on server.
 
----
 ## Installation
 ### 1. **Setup repo**
 Clone repo to your server _(if you must unzip it, unzip it)_ and open terminal in his folder.
@@ -32,6 +30,5 @@ python .\bot.py
 
 After first bot run fill bot config and run bot again.
 
----
 ## Author
 - [@PieselKlif](https://github.com/PieselKlif)
